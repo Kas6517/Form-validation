@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sign Up Today!</h1>
+      <form id="form">
+        <div class="form-group">
+          <!-- fullname -->
+          <label for="name">Full Name:</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Full Name"
+            name="name"
+            required
+            minlength="3"
+            maxlength="100"
+          />
+        </div>
+        <!-- phone number -->
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input
+            type="tel"
+            id="phone"
+            placeholder="000-000-0000"
+            name="phone"
+            required
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          />
+        </div>
+        <!-- email -->
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Email@address.com"
+            name="email"
+            required
+          />
+        </div>
+        <!-- website url -->
+        <div class="form-group">
+          <label for="website">website URL:</label>
+          <input
+            type="url"
+            id="website"
+            placeholder="Website address"
+            name="website"
+            required
+          />
+        </div>
+        <!-- password -->
+        <div class="form-group">
+          <label for="password1">Password:</label>
+          <input
+            type="password"
+            id="password1"
+            placeholder="Create Password (Min. 8 Characters)"
+            required
+            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+            title="Please use at least one uppercase, one lowercase and one number."
+          />
+        </div>
+        <!-- confirm password -->
+        <div class="form-group">
+          <label for="password2">Confirm Password:</label>
+          <input
+            type="password"
+            id="password2"
+            placeholder="Confirm Password"
+            name="password"
+            required
+            attern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+          />
+        </div>
+        <button type="submit">Register</button>
+      </form>
+      <!-- Error/Success -->
+      <div class="message-container">
+        <h3 id="message">Don't Hesitate!</h3>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
